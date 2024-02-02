@@ -14,7 +14,7 @@ const NossoServicos = () => {
             <div class="col-md-4 col-sm-6">
                 <div class="feature-center animate-box" data-animate-effect="fadeIn">
                     <span class="icon">
-                        <i class="ti-face-smile"></i>
+                    <i class="fa-regular fa-face-smile"></i>
                     </span>
                     <h3>Happy Hour & Bar</h3>
                     <p> Dispomos de um roteiro interativo com musica ao vivo e diversas promoções com preços especiais para os nossos drinks.</p>
@@ -23,7 +23,7 @@ const NossoServicos = () => {
             <div class="col-md-4 col-sm-6">
                 <div class="feature-center animate-box" data-animate-effect="fadeIn">
                     <span class="icon">
-                        <i class="ti-thought"></i>
+                    <i class="fa-solid fa-utensils"></i>
                     </span>
                     <h3>Executivos</h3>
                     <p> Contamos com um programa fidelidade de almoço executivo, o qual disponibilizamos menu executivo salada, prato principal e sobremesa de terça à sexta: <br/> 12:00H ás 18:00H</p>
@@ -32,7 +32,7 @@ const NossoServicos = () => {
             <div class="col-md-4 col-sm-6">
                 <div class="feature-center animate-box" data-animate-effect="fadeIn">
                     <span class="icon">
-                        <i class="ti-truck"></i>
+                        <i class="fa-solid fa-truck"></i>
                     </span>
                     <h3>Delivery</h3>
                     <p>Realizamos entrega nas seguintes regiões

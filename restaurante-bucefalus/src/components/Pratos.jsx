@@ -1,6 +1,21 @@
 import React from 'react'
+import {useDispatch} from 'react-redux'
+
+
 
 const Pratos = () => {
+
+    const dispatch = useDispatch()
+
+    const addProduct = (infoObj) => {  
+        console.log('dispatched')
+        dispatch({
+            type:'add',
+            payload: infoObj
+        })
+
+    }
+
   return (
     <div class="gtco-section">
     <div class="gtco-container">
@@ -13,8 +28,8 @@ const Pratos = () => {
         </div>
         <div class="row">
  
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="../images/massa-bucefalus.jpg" class="fh5co-card-item image-popup">
+            <div  class="col-lg-4 col-md-4 col-sm-6">
+                <a onClick={() => addProduct({ id:1 ,name:'Massa ao molho de camarão flambado no vinho', price:'82.99', img:'massa-bucefalus.jpg'})} href="#" class="fh5co-card-item image-popup">
                     <figure>
                         <div class="overlay">
                             <i class="ti-plus"></i>
@@ -27,16 +42,17 @@ const Pratos = () => {
                         <p>
                             <span class="price cursive-font">82.99</span>
                         </p>
+                        <i class="fa-solid fa-plus"></i>
                     </div>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="../images/moqueca-bucefalus" class="fh5co-card-item image-popup">
+                <a   onClick={() => addProduct({id:2, name:'Moqueca Baiana', price:'129.99', img:'moqueca-bucefalus'})} href="#" class="fh5co-card-item image-popup">
                     <figure>
                         <div class="overlay">
                             <i class="ti-plus"></i>
                         </div>
-                        <img src="../images/moqueca-bucefalus" alt="Image" class="img-responsive"/>
+                        <img src="/images/moqueca-bucefalus" alt="Image" class="img-responsive"/>
                     </figure>
                     <div class="fh5co-text">
                         <h2>Moqueca Baiana</h2>
@@ -44,11 +60,12 @@ const Pratos = () => {
                         <p>
                             <span class="price cursive-font">129.99</span>
                         </p>
+                        <i class="fa-solid fa-plus"></i>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="../images/parmegiana-bucefalus" class="fh5co-card-item image-popup">
+            <div  class="col-lg-4 col-md-4 col-sm-6">
+                <a onClick={() => addProduct({id:3, name:'Filet mignon a Parmeagiana', price:'119.90', img:'parmegiana-bucefalus'})} href="#" class="fh5co-card-item image-popup">
                     <figure>
                         <div class="overlay">
                             <i class="ti-plus"></i>
@@ -57,10 +74,11 @@ const Pratos = () => {
                     </figure>
                     <div class="fh5co-text">
                         <h2>Filet mignon a Parmeagiana</h2>
-                        <p>Acompanhado de  arroz e batata frita. Serve de 2 a 3 pessoas.</p>
+                        <p>Acompanhado de  arroz e batata frita. Serve de 2 a 3 pessoas.</p> <br />
                         <p>
-                            <span class="price cursive-font">29.40</span>
+                            <span class="price cursive-font">119.90</span>
                         </p>
+                        <i class="fa-solid fa-plus"></i>
                     </div>
                 </a>
             </div>

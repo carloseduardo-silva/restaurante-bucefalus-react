@@ -16,7 +16,9 @@
   
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-  
+    
+
+    <script src="https://kit.fontawesome.com/022b925fb6.js" crossorigin="anonymous"></script>
     <!-- Animate.css -->
     <link rel="stylesheet" href="./public/css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -43,8 +45,35 @@
     <script src="./public/js/modernizr-2.6.2.min.js"></script>
 
   </head>
-  <body>
+  <body class="normal">
     <div id="root"></div>
+    <div class="gototop js-top active">
+      <a href="#" class="js-gotop">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+    <div id="gtco-offcanvas">
+      <ul>
+      <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="./services.html">Serviços</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contato</a>
+                </li>
+                <li class="btn-cta">
+                    <a href="./reservation.html">
+                        <span>Reserva</span>
+                    </a>
+                </li>
+      </ul>
+    </div>
+ 
     <script type="module" src="/src/main.jsx"></script>
     	<!-- jQuery -->
 			<script src="./public/js/jquery.min.js"></script>

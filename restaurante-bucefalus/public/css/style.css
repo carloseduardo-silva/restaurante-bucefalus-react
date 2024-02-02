@@ -34,11 +34,98 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.offcanvas #page {
+
+.menuModal{
+  display: flex;
+  background-color: rgb(230, 162, 60);
+  color: rgb(250, 250, 250);
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 10px;
+  animation: slideFromRight 500ms;
+  position: fixed;
+  top: 49.5%;
+  left: 82.5%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 100vh;
+  width: 35%;
+  padding: 12px;
+}
+
+
+.modal_header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 2em 0em;
+}
+
+.modal_header h2{
+  color: rgb(255, 255, 255);
+  
+}
+
+.modal_header i{
+  color: rgb(255, 255, 255);
+  font-size: 1.8em;
+  padding-bottom: 5px;
+}
+
+.modal_header i:hover{
+  transform: scale(1.05);
+  transition: 250ms;
+  color: white;
+  cursor: pointer;
+}
+
+.menuItem{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2.75rem;
+  padding: 14px 10px;
+  color: rgb(217, 143, 46);
+  background-color: #f1f1f1;
+  width: 95%;
+  margin:1rem 0rem;
+  border-radius:10px;
+}
+
+.menuItem h3{
+  color: rgb(217, 143, 46);
+  font-size: 2rem;
+  margin: 0 0 3px;
+}
+
+.menuItem p {
+  margin: 0;
+}
+
+.menuItem img{
+  width: 210px;
+  height: 97%;
+}
+
+.itemInfos{
+  text-align: left;
+}
+
+
+
+
+
+.offcanvas2 #root {
   overflow: hidden;
   position: absolute;
+  width: 98vw;
 }
-.offcanvas #page:after {
+.offcanvas2 #root:after {
   -webkit-transition: 2s;
   -o-transition: 2s;
   transition: 2s;
@@ -51,6 +138,8 @@ body {
   background: rgba(0, 0, 0, 0.7);
   content: "";
 }
+
+
 
 a {
   color: #FBB448;
@@ -127,15 +216,20 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-nav a {
   padding: 5px 10px;
   color: #fff;
+  z-index: 4;
 }
 @media screen and (max-width: 768px) {
+
+  .gtco-nav .btn-menu{
+    display: none;
+  }
   .gtco-nav .menu-1, .gtco-nav .menu-2 {
     display: none;
   }
 }
 .gtco-nav ul {
   padding: 0;
-  margin: 2px 0 0 0;
+  margin: 2px 3rem 0 0;
 }
 .gtco-nav ul li {
   padding: 0;
@@ -216,6 +310,25 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-nav ul li.has-dropdown:hover a, .gtco-nav ul li.has-dropdown:focus a {
   color: #fff;
 }
+
+.gtco-nav .btn-menu{
+  font-size:23px;
+  position: absolute;
+  top:-6%;
+  right: 1%;
+  margin-left:10px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.gtco-nav .btn-menu:hover{
+  color: #999999;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition:250ms;
+}
+
+
+
 .gtco-nav ul li.btn-cta a {
   color: #FBB448;
 }
@@ -574,7 +687,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .gtco-staff h3 {
   font-size: 24px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .gtco-staff p {
   margin-bottom: 30px;
@@ -624,7 +737,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .gtco-contact-info ul li {
   padding: 0 0 0 50px;
-  margin: 0 0 30px 0;
+  margin: 0 0 34px 0;
   list-style: none;
   position: relative;
 }
@@ -644,22 +757,11 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.gtco-contact-info ul li.address:before {
-  font-size: 30px;
-  content: "\e9d1";
+.gtco-contact-info ul li i {
+  font-size: 26px;
+  margin: 0rem 16px 0rem 0rem;
 }
-.gtco-contact-info ul li.phone:before {
-  font-size: 23px;
-  content: "\e9f4";
-}
-.gtco-contact-info ul li.email:before {
-  font-size: 23px;
-  content: "\e9da";
-}
-.gtco-contact-info ul li.url:before {
-  font-size: 23px;
-  content: "\e9af";
-}
+
 
 form label {
   font-weight: normal !important;
@@ -1120,17 +1222,15 @@ form label {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-@media screen and (max-width: 768px) {
-  #gtco-offcanvas {
-    display: block;
-  }
-}
+
 .offcanvas #gtco-offcanvas {
   -moz-transform: translateX(0px);
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   -o-transform: translateX(0px);
   transform: translateX(0px);
+  display: block;
+
 }
 #gtco-offcanvas a {
   color: rgba(255, 255, 255, 0.5);
@@ -1227,6 +1327,7 @@ form label {
   text-decoration: none;
   outline: none;
 }
+
 
 .gtco-nav-toggle {
   width: 25px;
@@ -1835,6 +1936,18 @@ form label {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
+.fh5co-text i {
+  font-size: 6rem;
+}
+
+.fh5co-text i:hover{
+  transform: scale(1.05);
+  transition: 250ms;
+  
+}
+
+
 .fh5co-card-item:hover, .fh5co-card-item:focus {
   bottom: 7px;
   text-decoration: none;

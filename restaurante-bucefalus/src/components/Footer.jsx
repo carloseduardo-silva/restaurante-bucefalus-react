@@ -13,15 +13,15 @@ const Footer = () => {
 							<ul class="gtco-quick-contact">
 								<li>
 									<a href="telto:1397402-2220">
-										<i class="icon-phone"></i> (13) 97402-2220</a>
+									<i class="fa-solid fa-phone"></i> (13) 97402-2220</a>
 								</li>
 								<li>
 									<a  href="mailto:carloseduardokadu2004@gmail.com">
-										<i class="icon-mail2"></i> carloseduardokadu2004@gmail.com</a>
+									<i class="fa-solid fa-envelope"></i> carloseduardokadu2004@gmail.com</a>
 								</li>
 								<li>
 									<a href="https://www.contate.me/barbearia-kaducortes">
-										<i class="icon-chat"></i> Chat</a>
+									<i class="fa-brands fa-rocketchat"></i> Chat</a>
 								</li>
 							</ul>
 						</div>
@@ -30,17 +30,17 @@ const Footer = () => {
 							<ul class="gtco-social-icons">
 								<li>
 									<a href="https://www.instagram.com/bucefalusrestaurantegrill/" target="_blank">
-										<i class="icon-instagram"></i>
+									<i class="fa-brands fa-instagram"></i>
 									</a>
 								</li>
 								<li>
 									<a href="https://linkedin.com/in/carlos-eduardo-da-silva-050403235" target="_blank">
-										<i class="icon-linkedin"></i>
+									<i class="fa-brands fa-linkedin"></i>
 									</a>
 								</li>
 								<li>
 									<a href="https://github.com/carloseduardo-silva" target="_blank">
-										<i class="icon-github"></i>
+									<i class="fa-brands fa-github"></i>
 									</a>
 								</li>
 							</ul>

@@ -53,10 +53,10 @@ const Contato = () => {
 					<div class="gtco-contact-info">
 						<h3>Informações de Contato</h3>
 						<ul>
-							<li class="address">Rua José Avelino de Oliveira, 99 - Tombo, Guarujá/SP</li>
-							<li class="phone"><a href="tel://1321497360">(13) 2149-7360</a></li>
-							<li class="email"><a href="mailto:contato@hcode.com.br">bucefalus@gmail.com.br</a></li>
-							<li class="url"><a href="https://bucefalus-restaurante-grill.goomer.app/">https://bucefalus-restaurante-grill.goomer.app/</a></li>
+							<li class="address"> <i class="fa-solid fa-location-dot"></i> Rua José Avelino de Oliveira, 99 - Tombo, Guarujá/SP</li>
+							<li class="phone"> <i class="fa-solid fa-phone"></i> <a href="tel://1321497360">(13) 2149-7360</a></li>
+							<li class="email"> <i class="fa-solid fa-envelope"></i><a href="mailto:contato@hcode.com.br">bucefalus@gmail.com.br</a></li>
+							<li class="url"> <i class="fa-solid fa-globe"></i><a href="https://bucefalus-restaurante-grill.goomer.app/">https://bucefalus-restaurante-grill.goomer.app/</a></li>
 						</ul>
 					</div>
 

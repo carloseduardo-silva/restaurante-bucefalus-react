@@ -44,6 +44,8 @@
 
 	};
 
+
+
 	var formTab = function() {
 
 		$('.tab-menu a').on('click', function(event){
@@ -106,6 +108,7 @@
 	};
 
 
+
 	var burgerMenu = function() {
 
 		$('body').on('click', '.js-gtco-nav-toggle', function(event){
@@ -123,6 +126,23 @@
 		});
 	};
 
+
+	var menuModal = function() {
+
+		$('body').on('click', '.btn-menu', function(event){
+			var $this = $(this);
+
+
+			if ( $('body').hasClass('overflow offcanvas') ) {
+				$('body').removeClass('overflow offcanvas');
+			} else {
+				$('body').addClass('overflow offcanvas');
+			}
+			$this.toggleClass('active');
+			event.preventDefault();
+
+		});
+	};
 
 
 	var contentWayPoint = function() {
@@ -325,6 +345,7 @@
 		formTab();
 		offcanvasMenu();
 		burgerMenu();
+		menuModal();
 		contentWayPoint();
 		dropdown();
 		owlCarousel();
