@@ -22,8 +22,9 @@
          }
 
         case 'remove':
-
-        break
+        return {...state, menuItems: state.menuItems.filter(itemInfos => itemInfos.id !== action.payload )}
+         
+     
        
 
 

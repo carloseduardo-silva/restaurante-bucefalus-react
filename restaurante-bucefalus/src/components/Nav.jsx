@@ -9,7 +9,7 @@ import Item from './Item'
 
 const Nav = () => {
 
-    const [showMenuModal, setshowMenuModal] = useState(true)
+    const [showMenuModal, setshowMenuModal] = useState(false)
 
     const { menuItems } = useSelector((rootReducer) => rootReducer.menuReducer)
     

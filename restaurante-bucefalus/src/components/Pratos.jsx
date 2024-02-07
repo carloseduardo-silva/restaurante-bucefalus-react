@@ -8,7 +8,6 @@ const Pratos = () => {
     const dispatch = useDispatch()
 
     const addProduct = (infoObj) => {  
-        console.log('dispatched')
         dispatch({
             type:'add',
             payload: infoObj

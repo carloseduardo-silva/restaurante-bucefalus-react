@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { UseDispatch, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 const Item = ({itemInfo}) => {
 
@@ -12,8 +12,11 @@ const Item = ({itemInfo}) => {
 
     })
 
-    const removeItem = () =>{
-
+    const removeItem = (id) =>{
+        dispatch({
+          type:'remove',
+          payload:id
+        })
 
 
 
@@ -27,7 +30,7 @@ const Item = ({itemInfo}) => {
       <div className='itemInfos'>
           <h3>{itemInfo.name}</h3>
           <p>R${itemInfo.price}</p>
-          <span onClick={() => removeItem()}> Retirar </span>
+          <span onClick={() => removeItem(itemInfo.id)}> Retirar </span>
       </div>
     </div>
   )
