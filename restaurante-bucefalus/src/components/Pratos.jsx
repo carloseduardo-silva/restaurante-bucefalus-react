@@ -28,12 +28,12 @@ const Pratos = () => {
         <div class="row">
  
             <div  class="col-lg-4 col-md-4 col-sm-6">
-                <a onClick={() => addProduct({ id:1 ,name:'Massa ao molho de camarão flambado no vinho', price:'82.99', img:'massa-bucefalus.jpg'})} href="#" class="fh5co-card-item image-popup">
+                <a onClick={() => addProduct({ id:1 ,name:'Massa ao molho de camarão flambado no vinho', price:'82.99', img:'/src/images/massa-bucefalus.jpg'})} href="#" class="fh5co-card-item image-popup">
                     <figure>
                         <div class="overlay">
                             <i class="ti-plus"></i>
                         </div>
-                        <img src="../images/massa-bucefalus.jpg" alt="Image" class="img-responsive"/>
+                        <img src="/src/images/massa-bucefalus.jpg" alt="Image" class="img-responsive"/>
                     </figure>
                     <div class="fh5co-text">
                         <h2>Massa ao molho de camarão flambado no vinho</h2>
@@ -46,12 +46,12 @@ const Pratos = () => {
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a   onClick={() => addProduct({id:2, name:'Moqueca Baiana', price:'129.99', img:'moqueca-bucefalus'})} href="#" class="fh5co-card-item image-popup">
+                <a   onClick={() => addProduct({id:2, name:'Moqueca Baiana', price:'129.99', img:'/src/images/moqueca.jpg'})} href="#" class="fh5co-card-item image-popup">
                     <figure>
                         <div class="overlay">
                             <i class="ti-plus"></i>
                         </div>
-                        <img src="/images/moqueca-bucefalus" alt="Image" class="img-responsive"/>
+                        <img src="/src/images/moqueca.jpg" alt="Image" class="img-responsive"/>
                     </figure>
                     <div class="fh5co-text">
                         <h2>Moqueca Baiana</h2>
@@ -64,12 +64,12 @@ const Pratos = () => {
                 </a>
             </div>
             <div  class="col-lg-4 col-md-4 col-sm-6">
-                <a onClick={() => addProduct({id:3, name:'Filet mignon a Parmeagiana', price:'119.90', img:'parmegiana-bucefalus'})} href="#" class="fh5co-card-item image-popup">
+                <a onClick={() => addProduct({id:3, name:'Filet mignon a Parmeagiana', price:'119.90', img:'/src/images/parmegiana.jpg'})} href="#" class="fh5co-card-item image-popup">
                     <figure>
                         <div class="overlay">
                             <i class="ti-plus"></i>
                         </div>
-                        <img src="../images/parmegiana-bucefalus" alt="Image" class="img-responsive"/>
+                        <img src="/src/images/parmegiana.jpg" alt="Image" class="img-responsive"/>
                     </figure>
                     <div class="fh5co-text">
                         <h2>Filet mignon a Parmeagiana</h2>

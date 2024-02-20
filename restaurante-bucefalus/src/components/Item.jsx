@@ -6,11 +6,7 @@ const Item = ({itemInfo}) => {
     const dispatch = useDispatch()
 
 
-    useEffect(() =>{
-        const imgUrl = './images/' + itemInfo.img
-        document.querySelector('img').src = imgUrl
-
-    })
+   
 
     const removeItem = (id) =>{
         dispatch({
@@ -23,11 +19,11 @@ const Item = ({itemInfo}) => {
     }
 
   return (
-    <div className='menuItem'>
+    <div id={itemInfo.id} className='menuItem'>
 
-        <img src='' alt="" />
+        <img src={itemInfo.img} alt="" />
 
-      <div className='itemInfos'>
+      <div  className='itemInfos'>
           <h3>{itemInfo.name}</h3>
           <p>R${itemInfo.price}</p>
           <span onClick={() => removeItem(itemInfo.id)}> Retirar </span>
