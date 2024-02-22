@@ -27,7 +27,7 @@ const Pratos = () => {
         </div>
         <div class="row">
  
-            <div  class="col-lg-4 col-md-4 col-sm-6">
+            <div  class="col-lg-4 col-md-4 col-sm-6 animate-box">
                 <a onClick={() => addProduct({ id:1 ,name:'Massa ao molho de camarão flambado no vinho', price:'82.99', img:'/src/images/massa-bucefalus.jpg'})} href="#" class="fh5co-card-item image-popup">
                     <figure>
                         <div class="overlay">
@@ -45,7 +45,7 @@ const Pratos = () => {
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-sm-6 animate-box">
                 <a   onClick={() => addProduct({id:2, name:'Moqueca Baiana', price:'129.99', img:'/src/images/moqueca.jpg'})} href="#" class="fh5co-card-item image-popup">
                     <figure>
                         <div class="overlay">
@@ -63,7 +63,7 @@ const Pratos = () => {
                     </div>
                 </a>
             </div>
-            <div  class="col-lg-4 col-md-4 col-sm-6">
+            <div  class="col-lg-4 col-md-4 col-sm-6 animate-box">
                 <a onClick={() => addProduct({id:3, name:'Filet mignon a Parmeagiana', price:'119.90', img:'/src/images/parmegiana.jpg'})} href="#" class="fh5co-card-item image-popup">
                     <figure>
                         <div class="overlay">

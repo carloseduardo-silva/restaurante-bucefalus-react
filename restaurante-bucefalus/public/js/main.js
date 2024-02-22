@@ -339,6 +339,8 @@
 	};
 
 
+
+
 	
 	$(function(){
 		mobileMenuOutsideClick();
@@ -354,6 +356,7 @@
 		counterWayPoint();
 		dateTimeForm();
 		parallax();
+		
 	});
 
 

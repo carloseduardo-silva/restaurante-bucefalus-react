@@ -1,4 +1,4 @@
-import React from 'react'
+import {useEffect} from 'react'
 
 
 
@@ -7,6 +7,53 @@ import HeaderContato from '../components/HeaderContato'
 
 import Footer from '../components/Footer'
 const Contato = () => {
+
+	useEffect(() =>{
+        const animatedElements = document.querySelectorAll('.animate-boxUp')
+    
+        const myObserver = new IntersectionObserver((entries) =>{
+          entries.forEach(entry =>{
+              if(entry.isIntersecting){
+                 
+                  entry.target.classList.add('show')
+                  entry.target.classList.remove('animate-boxUp')
+                  
+              }
+              else{
+                
+                  entry.target.classList.remove('show')
+              }
+          })
+        })
+    
+        animatedElements.forEach(el => {
+            myObserver.observe(el)
+        })
+      })
+	
+	useEffect(() =>{
+		const animatedElements = document.querySelectorAll('.animate-box')
+	
+		const myObserver = new IntersectionObserver((entries) =>{
+		  entries.forEach(entry =>{
+			  if(entry.isIntersecting){
+				
+				  entry.target.classList.add('fadeInUp')
+				  entry.target.classList.remove('animate-box')
+				  
+			  }
+			  else{
+				
+				  entry.target.classList.remove('fadeInUp')
+			  }
+		  })
+		})
+	
+		animatedElements.forEach(el => {
+			myObserver.observe(el)
+		})
+	  })
+
   return (
     <>  
     
@@ -16,7 +63,7 @@ const Contato = () => {
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="col-md-6 animate-box">
+					<div class="col-md-6 animate-boxUp">
 					<h3>Entre em Contato</h3>
 
 				
@@ -48,10 +95,10 @@ const Contato = () => {
 
 					</form>		
 				</div>
-				<div class="col-md-5 col-md-push-1 animate-box">
+				<div class="col-md-5 col-md-push-1 animate-boxUp">
 					
 					<div class="gtco-contact-info">
-						<h3>Informações de Contato</h3>
+						<h3 style={{marginLeft:"2.5rem"}}>Informações de Contato</h3>
 						<ul>
 							<li class="address"> <i class="fa-solid fa-location-dot"></i> Rua José Avelino de Oliveira, 99 - Tombo, Guarujá/SP</li>
 							<li class="phone"> <i class="fa-solid fa-phone"></i> <a href="tel://1321497360">(13) 2149-7360</a></li>

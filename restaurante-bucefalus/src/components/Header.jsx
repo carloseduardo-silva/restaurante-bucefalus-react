@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Header = () => {
+
+    useEffect(() =>{
+       
+    })
+
   return (
   <>
   
@@ -26,7 +31,7 @@ const Header = () => {
                                     <div class="tab-content">
                                         <div class="tab-content-inner active" data-content="signup">
                                             <h3 class="cursive-font">Reserva de mesa</h3>
-                                            <form action="/reservation" method="post">
+                                            <form  onSubmit={() => {window.alert('Reserva realizada com sucesso!')}}>
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
                                                         <label for="inputName">Nome</label>

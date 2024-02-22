@@ -1,4 +1,4 @@
-import React from 'react'
+import {useEffect} from 'react'
 
 //components
 import Nav from "../components/Nav"
@@ -6,6 +6,53 @@ import HeaderReserva from '../components/HeaderReserva'
 import Footer from '../components/Footer'
 
 const Reserva = () => {
+
+    useEffect(() =>{
+        const animatedElements = document.querySelectorAll('.animate-boxUp')
+    
+        const myObserver = new IntersectionObserver((entries) =>{
+          entries.forEach(entry =>{
+              if(entry.isIntersecting){
+                  
+                  entry.target.classList.add('show')
+                  entry.target.classList.remove('animate-boxUp')
+                  
+              }
+              else{
+                
+                  entry.target.classList.remove('show')
+              }
+          })
+        })
+    
+        animatedElements.forEach(el => {
+            myObserver.observe(el)
+        })
+      })
+      
+    useEffect(() =>{
+        const animatedElements = document.querySelectorAll('.animate-box')
+    
+        const myObserver = new IntersectionObserver((entries) =>{
+          entries.forEach(entry =>{
+              if(entry.isIntersecting){
+                 
+                  entry.target.classList.add('show')
+                  entry.target.classList.remove('animate-box')
+                  
+              }
+              else{
+                
+                  entry.target.classList.remove('show')
+              }
+          })
+        })
+    
+        animatedElements.forEach(el => {
+            myObserver.observe(el)
+        })
+      })
+
   return (
     <>  
     <Nav/>
@@ -15,7 +62,7 @@ const Reserva = () => {
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="col-md-6 animate-box">
+					<div class="col-md-6 animate-boxUp">
                     
                   
 					        <h3>Reserva de mesa</h3>
@@ -69,15 +116,15 @@ const Reserva = () => {
                         </div>
                     </form>
 				</div>
-				<div class="col-md-5 col-md-push-1 animate-box">
+				<div class="col-md-5 col-md-push-1 animate-boxUp">
 					
 					<div class="gtco-contact-info">
-						<h3>Informações de Contato</h3>
-						<ul>
-							<li class="address">Rua José Avelino de Oliveira, 99 - Tombo, Guarujá/SP</li>
-							<li class="phone"><a href="tel://1321497360">(13) 2149-7360</a></li>
-							<li class="email"><a href="mailto:contato@hcode.com.br">bucefalus@gmail.com.br</a></li>
-							<li class="url"><a href="https://bucefalus-restaurante-grill.goomer.app/">https://bucefalus-restaurante-grill.goomer.app/</a></li>
+						<h3 style={{marginLeft:"2.5rem"}}>Informações de Contato</h3>
+                        <ul>
+							<li class="address"> <i class="fa-solid fa-location-dot"></i> Rua José Avelino de Oliveira, 99 - Tombo, Guarujá/SP</li>
+							<li class="phone"> <i class="fa-solid fa-phone"></i> <a href="tel://1321497360">(13) 2149-7360</a></li>
+							<li class="email"> <i class="fa-solid fa-envelope"></i><a href="mailto:contato@hcode.com.br">bucefalus@gmail.com.br</a></li>
+							<li class="url"> <i class="fa-solid fa-globe"></i><a href="https://bucefalus-restaurante-grill.goomer.app/">https://bucefalus-restaurante-grill.goomer.app/</a></li>
 						</ul>
 					</div>
 

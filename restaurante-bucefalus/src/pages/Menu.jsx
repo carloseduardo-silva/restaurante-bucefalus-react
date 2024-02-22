@@ -1,4 +1,4 @@
-import React from 'react'
+import {useEffect} from 'react'
 
 
 //components
@@ -10,6 +10,30 @@ import Inscrever from '../components/Inscrever'
 import Footer from '../components/Footer'
 
 const Menu = () => {
+
+  useEffect(() =>{
+    const animatedElements = document.querySelectorAll('.animate-box')
+
+    const myObserver = new IntersectionObserver((entries) =>{
+      entries.forEach(entry =>{
+          if(entry.isIntersecting){
+              
+              entry.target.classList.add('show')
+              entry.target.classList.remove('animate-box')
+              
+          }
+          else{
+            
+              entry.target.classList.remove('show')
+          }
+      })
+    })
+
+    animatedElements.forEach(el => {
+        myObserver.observe(el)
+    })
+  })
+
   return (
     <>
     <Nav/>
