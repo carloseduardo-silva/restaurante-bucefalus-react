@@ -18,6 +18,7 @@ const Pratos = () => {
   return (
     <div class="gtco-section">
     <div class="gtco-container">
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
                 <h2 class="cursive-font primary-color">Pratos Populares</h2>
@@ -25,6 +26,7 @@ const Pratos = () => {
                     gentis num é.</p>
             </div>
         </div>
+
         <div class="row">
  
             <div  class="col-lg-4 col-md-4 col-sm-6 animate-box">
@@ -83,6 +85,7 @@ const Pratos = () => {
             </div>
 
         </div>
+        
     </div>
     </div>
   )
